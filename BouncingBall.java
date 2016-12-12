@@ -26,9 +26,13 @@ public class BouncingBall
     private int diameter;
     private int xPosition;
     private int yPosition;
-    private final int groundPosition;      // y position of ground
+    private final int bottomPosition; // y position of ground
+    private final int leftPosition; 
+    private final int rightPosition; 
+    private final int topPosition; 
     private Canvas canvas;
-    private int ySpeed = 1;                // initial downward speed
+    private int ySpeed = 3;                // initial downward speed
+    private int xSpeed = 3;
 
     /**
      * Constructor for objects of class BouncingBall
@@ -41,13 +45,17 @@ public class BouncingBall
      * @param drawingCanvas  the canvas to draw this ball on
      */
     public BouncingBall(int xPos, int yPos, int ballDiameter, Color ballColor,
-                        int groundPos, Canvas drawingCanvas)
+                        int bottomPos, int leftPos, int rightPos, int topPos,
+                        Canvas drawingCanvas)
     {
         xPosition = xPos;
         yPosition = yPos;
         color = ballColor;
         diameter = ballDiameter;
-        groundPosition = groundPos;
+        bottomPosition = bottomPos;
+        leftPosition = leftPos;
+        rightPosition = rightPos;
+        topPosition = topPos;
         canvas = drawingCanvas;
     }
 
@@ -77,18 +85,31 @@ public class BouncingBall
         erase();
             
         // compute new position
-        ySpeed += GRAVITY;
+        
         yPosition += ySpeed;
-        xPosition +=2;
+        xPosition += xSpeed;
 
         // check if it has hit the ground
-        if(yPosition >= (groundPosition - diameter) && ySpeed > 0) {
-            yPosition = (int)(groundPosition - diameter);
-            ySpeed = -ySpeed + ballDegradation; 
+        if(yPosition >= (bottomPosition - diameter) && ySpeed > 0) {
+            yPosition = (int)(bottomPosition - diameter);
+            ySpeed = -ySpeed ; 
+        }
+        if(yPosition <= (topPosition) && ySpeed < 0) {
+            yPosition = (int)(topPosition);
+            ySpeed = -ySpeed ; 
+        }
+        if(xPosition <= (leftPosition) && xSpeed < 0) {
+            xPosition = (int)(leftPosition);
+            xSpeed = -xSpeed ; 
+        }
+        if(xPosition >= (rightPosition - diameter) && xSpeed > 0) {
+            xPosition = (int)(rightPosition - diameter);
+            xSpeed = -xSpeed ; 
         }
 
         // draw again at new position
         draw();
+        
     }    
 
     /**

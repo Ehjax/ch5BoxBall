@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=xPos\ yPos\ ballDiameter\ width\ height\ ballColor\ drawingCanvas
+comment0.target=BallBox(int,\ int,\ int,\ int,\ int,\ java.awt.Color,\ Canvas)
+comment0.text=\r\n\ Constuctor\ for\ BallBox\r\n\ @param\ topwall\ must\ match\ y\ value\ from\ BallDemo\ class.\r\n\ @param\ leftwall\ must\ match\ x\ value\ from\ BallDemo\ class.\r\n\ After\ the\ constructor\ sets\ the\ necessary\ parameters\ the\ constructor\ calls\ the\ randomSpeed()\ method\ to\ assign\ both\ a\ random\ speed\ and\ a\ positive\ or\ negative\ value.\r\n
+comment1.params=
+comment1.target=void\ draw()
+comment1.text=\r\n\ Draw\ this\ ball\ at\ its\ current\ position\ onto\ the\ canvas.\r\n
+comment2.params=
+comment2.target=void\ randomSpeed()
+comment2.text=\r\n\ randomSpeed\ Method\ randomly\ generates\ a\ speed\ from\ -6\ to\ 6\ not\ including\ 0\ and\ also\ randomly\ assigns\ the\ speed\ as\ positive\ or\ negative.\ This\ way\ both\ variables\ don't\ have\ to\ \r\n\ have\ the\ same\ speed\ or\ direction.\r\n
+comment3.params=
+comment3.target=void\ erase()
+comment3.text=\r\n\ Erase\ this\ ball\ at\ its\ current\ position.\r\n
+comment4.params=
+comment4.target=void\ move()
+comment4.text=\r\n\ Move\ this\ ball\ according\ to\ its\ position\ and\ speed\ and\ redraw.\r\n
+comment5.params=
+comment5.target=int\ getXPosition()
+comment5.text=\r\n\ return\ the\ horizontal\ position\ of\ this\ ball\r\n
+comment6.params=
+comment6.target=int\ getYPosition()
+comment6.text=\r\n\ return\ the\ vertical\ position\ of\ this\ ball\r\n
+comment7.params=
+comment7.target=void\ drawRECTANGLE()
+comment7.text=\r\n\ Method\ to\ redraw\ a\ rectangle\ after\ ball\ movements\ are\ drawn\ and\ the\ rectangle\ gets\ chipped\ away\ at.\ This\ method\ is\ called\ from\ the\ move\ method.\r\n
+numComments=8

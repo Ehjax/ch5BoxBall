@@ -1,8 +1,11 @@
 #BlueJ class context
-comment0.params=
-comment0.target=BallDemo()
-comment0.text=\r\n\ Create\ a\ BallDemo\ object.\ Creates\ a\ fresh\ canvas\ and\ makes\ it\ visible.\r\n
+comment0.params=width\ height
+comment0.target=void\ setCanvas(int,\ int)
+comment0.text=\r\n\ This\ method\ intitializes\ the\ canvas\ and\ also\ draws\ a\ rectangle\ with\ all\ of\ its\ walls\ five\ \r\n\ integers\ less\ then\ the\ dimension\ of\ the\ canvas.\r\n
 comment1.params=
-comment1.target=void\ bounce()
-comment1.text=\r\n\ Simulate\ two\ bouncing\ balls\r\n
-numComments=2
+comment1.target=void\ boxBounce()
+comment1.text=\r\n\ boxBounce\ randomly\ assigns\ 20\ different\ balls\ color\ within\ a\ \r\n\ certain\ range\ to\ avoid\ transparent\ and\ white\ balls,\ it\ randomly\ assigns\ the\ diameter\ of\ the\ balls\ and\ their\r\n\ location\ within\ the\ size\ of\ the\ rectangle\ that\ is\ drawn\ on\ the\ canvas.\ \r\n
+comment2.params=
+comment2.target=void\ drawRECTANGLE()
+comment2.text=\r\n\ This\ method\ draws\ a\ rectangle\ that\ receives\ the\ dimensions\ of\ the\ canvas\ and\ then\ sets\ the\ walls\r\n\ of\ the\ rectangle\ to\ be\ five\ less\ than\ the\ dimensions\ of\ the\ canvas.\r\n
+numComments=3
